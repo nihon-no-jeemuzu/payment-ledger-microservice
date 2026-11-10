@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: payment-ledger-microservice
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ledger_db
+    username: postgres
+    password: postgrespassword
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    enabled: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: payment-group
